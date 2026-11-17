@@ -1,0 +1,15 @@
+{
+  "name": "سودوکو کلاسیک",
+  "short_name": "سودوکو",
+  "start_url": "/Sudoku64/index.html",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5260/5260498.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
