@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build Web App Artifact
 
 on:
   push:
@@ -11,18 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Upload HTML Package
+        uses: actions/upload-artifact@v4
         with:
-          node-version: 18
-
-      - name: Install Bubblewrap CLI
-        run: npm install -g @pwabuilder/bubblewrap
-
-      - name: Generate Android Project & APK
-        run: |
-          # تنظیمات اولیه خودکار برای ساخت اپلیکیشن
-          bubblewrap init --manifest https://example.com/manifest.json --directory ./android-app --skip-validation || true
-          
-          # اگر خواستید می‌توانید نام پکیج را شخصی‌سازی کنید
-          echo "Build completed successfully!"
+          name: sudoku-web-package
+          path: index.html
